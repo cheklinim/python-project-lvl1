@@ -14,6 +14,7 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 
 patch:
+	rm -R dist/
 	poetry install
 	poetry version patch
 	poetry build
