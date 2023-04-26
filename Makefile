@@ -13,3 +13,10 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
+patch:
+	poetry install
+	poetry version patch
+	poetry build
+	poetry publish --dry-run
+	python3 -m pip install --user dist/*.whl
+
