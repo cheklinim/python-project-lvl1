@@ -24,6 +24,10 @@ def game_even():
             break
 
 
+def game_calc():
+    pass
+
+
 def main():
     print('This is library file. It should be imported.')
 
