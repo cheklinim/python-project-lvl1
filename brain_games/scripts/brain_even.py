@@ -2,6 +2,7 @@
 
 from brain_games.lib.games import game_even
 
+
 def main():
     game_even()
 
