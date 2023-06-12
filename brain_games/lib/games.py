@@ -4,6 +4,7 @@ import prompt
 import random
 from brain_games.lib.greeting import greet_user
 from brain_games.lib.calculations import is_even
+from brain_games.lib.answer_examenation import answer_exam
 
 
 def game_even():
@@ -15,14 +16,7 @@ def game_even():
         print(f'Question: {number}')
         user_answer = prompt.string('Your answer:')
         answer = 'yes' if is_even(number) else 'no'
-        if answer == user_answer:
-            print('Correct!')
-            counter += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(.\
-                    Correct answer was '{answer}'.")
-            print(f"Let's try again, {name}!")
-            break
+        counter = answer_exam(answer, user_answer, counter)
 
 
 def game_calc():
@@ -38,15 +32,7 @@ def game_calc():
         answer = eval(expression)
         print(expression)
         user_answer = int(prompt.string('Your answer:'))
-        if answer == user_answer:
-            print('Correct!')
-            counter += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(.\
-                    Correct answer was '{answer}'.")
-            print(f"Let's try again, {name}!")
-            break
-
+        counter = answer_exam(answer, user_answer, counter)
 
 def main():
     print('This is library file. It should be imported.')
