@@ -1,7 +1,8 @@
 """Calculations library module."""
 
+
 def is_even(x):
-    return not(x % 2)
+    return not (x % 2)
 
 
 def main():

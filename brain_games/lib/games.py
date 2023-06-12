@@ -19,13 +19,33 @@ def game_even():
             print('Correct!')
             counter += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(.\
+                    Correct answer was '{answer}'.")
             print(f"Let's try again, {name}!")
             break
 
 
 def game_calc():
-    pass
+    name = greet_user()
+    print('Calculate the expression:')
+    counter = 0
+    while counter < 3:
+        num1 = random.randint(1, 99)
+        num2 = random.randint(1, 99)
+        operations = '+-*'
+        operation = operations[random.randint(0, 2)]
+        expression = str(num1) + operation + str(num2)
+        answer = eval(expression)
+        print(expression)
+        user_answer = int(prompt.string('Your answer:'))
+        if answer == user_answer:
+            print('Correct!')
+            counter += 1
+        else:
+            print(f"'{user_answer}' is wrong answer ;(.\
+                    Correct answer was '{answer}'.")
+            print(f"Let's try again, {name}!")
+            break
 
 
 def main():
