@@ -1,6 +1,6 @@
 """The game about simple calculations"""
 
-from brain_games.lib.games.games import game_calc
+from brain_games.lib.games.game_calc import game_calc
 
 
 def main():

@@ -1,6 +1,6 @@
 """The game about odd-even numbers."""
 
-from brain_games.lib.games.games import game_even
+from brain_games.lib.games.game_even import game_even
 
 
 def main():
