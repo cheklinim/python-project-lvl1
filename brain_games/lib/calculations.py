@@ -14,6 +14,11 @@ def gcd(a, b):
     return (a + b)
 
 
+def progression(first, difference, length):
+    result = [x for x in range(first, first + difference * length, difference)]
+    return result
+
+
 def main():
     print('This is library module. It should be imported')
 
