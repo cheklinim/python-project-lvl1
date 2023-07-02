@@ -33,6 +33,22 @@ patch:
 	poetry publish --dry-run
 	python3 -m pip install --user dist/*.whl
 
+minor:
+	rm -R dist/
+	poetry install
+	poetry version minor
+	poetry build
+	poetry publish --dry-run
+	python3 -m pip install --user dist/*.whl
+
+major:
+	rm -R dist/
+	poetry install
+	poetry version major
+	poetry build
+	poetry publish --dry-run
+	python3 -m pip install --user dist/*.whl
+
 lint:
 	poetry run flake8 brain_games
 
