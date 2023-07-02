@@ -1,5 +1,4 @@
 """Calculations library module."""
-from math import sqrt
 
 
 def is_even(x):
