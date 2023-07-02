@@ -1,4 +1,4 @@
-"""Module with main logic of game-calc."""
+"""Module with main logic of game-gcd."""
 
 import prompt
 import random

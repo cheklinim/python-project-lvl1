@@ -1,4 +1,4 @@
-"""The game about simple calculations"""
+"""The game about greater common divisor"""
 
 from brain_games.lib.games.game_gcd import game_gcd
 
